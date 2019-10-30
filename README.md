@@ -1,4 +1,4 @@
 # proyectoTecnologico Plantitas
--> Script MySQL
--> APIs Servicios para RaspBerry
+-> Script MySQL <br>
+-> APIs Servicios para RaspBerry <br>
 -> alojamiento http://produccioneselvis.com/InsertarRegHumedad.php
