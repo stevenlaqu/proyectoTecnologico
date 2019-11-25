@@ -7,7 +7,7 @@ $values = json_encode($arr);
 if($values !== false){
     echo $values;
 }else{
-    echo "";
+    echo "false";
 }
 
 
