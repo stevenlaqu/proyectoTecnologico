@@ -89,6 +89,11 @@ CREATE TABLE `planta` (
 ) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=latin1;
 
 INSERT INTO `planta` VALUES (1,'helecho','costero - tropical','ornamental',45,'lunahuana','2019-05-22 00:00:00','2019-10-29 00:00:00',NULL,1,'T');
+INSERT INTO `planta` VALUES (2,'helecho','costero - tropical','ornamental',45,'lunahuana','2019-05-22 00:00:00','2019-10-29 00:00:00',NULL,1,'T');
+INSERT INTO `planta` VALUES (3,'helecho','costero - tropical','ornamental',45,'lunahuana','2019-05-22 00:00:00','2019-10-29 00:00:00',NULL,1,'T');
+INSERT INTO `planta` VALUES (4,'helecho','costero - tropical','ornamental',45,'lunahuana','2019-05-22 00:00:00','2019-10-29 00:00:00',NULL,1,'T');
+INSERT INTO `planta` VALUES (5,'helecho','costero - tropical','ornamental',45,'lunahuana','2019-05-22 00:00:00','2019-10-29 00:00:00',NULL,1,'T');
+INSERT INTO `planta` VALUES (6,'helecho','costero - tropical','ornamental',45,'lunahuana','2019-05-22 00:00:00','2019-10-29 00:00:00',NULL,1,'T');
 
 CREATE TABLE `sensorhumedad` (
   `idsensorhumedad` int(11) NOT NULL AUTO_INCREMENT,
