@@ -12,11 +12,13 @@ CREATE TABLE `usuario` (
   `fec_nac` datetime DEFAULT NULL,
   `direccion` varchar(200) DEFAULT NULL,
   `fec_reg` datetime DEFAULT NULL,
+  `img` varchar(255) DEFAULT NULL,
+  `imgport` varchar(255) DEFAULT NULL,
   `flg_activo` char(1) DEFAULT NULL,  
   PRIMARY KEY (`idusuario`)
 ) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=latin1;
 
-INSERT INTO `usuario` VALUES (1,'steven','stevenlaqu@gmail.com','123456','steven','laura quispe','98765478','1994-10-29 00:00:00','Calle los Jazmines','2019-10-29 00:00:00','T');
+INSERT INTO `usuario` VALUES (1,'steven','stevenlaqu@gmail.com','123456','steven','laura quispe','98765478','1994-10-29 00:00:00','Calle los Jazmines','2019-10-29 00:00:00','userport1','userprof1','T');
 
 CREATE TABLE `area` (
   `idarea` int(11) NOT NULL AUTO_INCREMENT,
@@ -97,12 +99,12 @@ CREATE TABLE `planta` (
   CONSTRAINT `plan_terr` FOREIGN KEY (`id_terreno`) REFERENCES `terreno` (`idterreno`) 
 ) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=latin1;
 
-INSERT INTO `planta` VALUES (1,'helecho','costero - tropical','ornamental',45,'lunahuana','','2019-05-22 00:00:00','2019-10-29 00:00:00',NULL,1,'T');
-INSERT INTO `planta` VALUES (2,'cactus','costero - seco','ornamental',45,'ica','','2019-05-22 00:00:00','2019-10-29 00:00:00',NULL,2,'T');
-INSERT INTO `planta` VALUES (3,'rosas','costero - tropical','ornamental',45,'lima','','2019-05-22 00:00:00','2019-10-29 00:00:00',NULL,3,'T');
-INSERT INTO `planta` VALUES (4,'hortensias','costero - tropical','ornamental',45,'lima','','2019-05-22 00:00:00','2019-10-29 00:00:00',NULL,4,'T');
-INSERT INTO `planta` VALUES (5,'geráneo','costero - tropical','ornamental',45,'huacho','','2019-05-22 00:00:00','2019-10-29 00:00:00',NULL,2,'T');
-INSERT INTO `planta` VALUES (6,'zanahoria','costero - tropical','ornamental',45,'lima','','2019-05-22 00:00:00','2019-10-29 00:00:00',NULL,3,'T');
+INSERT INTO `planta` VALUES (1,'helecho','costero - tropical','ornamental',45,'lunahuana','planta1','2019-05-22 00:00:00','2019-10-29 00:00:00',NULL,1,'T');
+INSERT INTO `planta` VALUES (2,'cactus','costero - seco','ornamental',45,'ica','planta2','2019-05-22 00:00:00','2019-10-29 00:00:00',NULL,2,'T');
+INSERT INTO `planta` VALUES (3,'rosas','costero - tropical','ornamental',45,'lima','planta3','2019-05-22 00:00:00','2019-10-29 00:00:00',NULL,3,'T');
+INSERT INTO `planta` VALUES (4,'hortensias','costero - tropical','ornamental',45,'lima','planta4','2019-05-22 00:00:00','2019-10-29 00:00:00',NULL,4,'T');
+INSERT INTO `planta` VALUES (5,'geráneo','costero - tropical','ornamental',45,'huacho','planta5','2019-05-22 00:00:00','2019-10-29 00:00:00',NULL,2,'T');
+INSERT INTO `planta` VALUES (6,'zanahoria','costero - tropical','ornamental',45,'lima','planta6','2019-05-22 00:00:00','2019-10-29 00:00:00',NULL,3,'T');
 
 CREATE TABLE `sensorhumedad` (
   `idsensorhumedad` int(11) NOT NULL AUTO_INCREMENT,
