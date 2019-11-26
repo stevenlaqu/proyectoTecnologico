@@ -19,17 +19,20 @@ class brGeneric {
         return $id;
     }
     public function actualizar($table,$columns,$objjson) {
-        $id = false;
+        $exito = false;
         $oda = new daRegistroHumedad();
         
         try {            
             $objMysqli = new mysqli(CONNECTION_HOST, CONNECTION_USER, CONNECTION_PASSWORD, CONNECTION_BD);
-            $id = $oda->actualizar($objMysqli,$table,$columns,$objjson);
+            $num_rows = $oda->actualizar($objMysqli,$table,$columns,$objjson);      
             $objMysqli->close();
+            if($num_rows>0){
+                $exito= true;
+            }
         } catch (Exception $error) {
             return $error;
         }
-        return $id;
+        return $exito;
     }
 
     public function eliminar($table,$columns,$objjson) {

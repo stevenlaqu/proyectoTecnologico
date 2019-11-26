@@ -1,0 +1,24 @@
+[
+    {
+            "method":"create",
+            "table":"tr_sensorhumedad",
+            "columns":"idtr_sensorhumedad,id_sensorhumedad,lectura,fecha,ult_intervalo,flg_motivoriego",
+            "idtr_sensorhumedad":1,
+            "id_sensorhumedad" : 1,
+            "lectura" : 200,
+            "fecha": "2019-01-01 21:21",
+            "ult_intervalo":"2019-1-01 00:50",
+            "flg_motivoriego": "F"
+    },
+    {
+	"method":"read",
+	"table":"tr_sensorhumedad"
+},
+    {
+	"method":"read_id",
+	"table":"tr_sensorhumedad",
+	"columns":"idtr_sensorhumedad",
+	"idtr_sensorhumedad":1
+    },
+    
+]

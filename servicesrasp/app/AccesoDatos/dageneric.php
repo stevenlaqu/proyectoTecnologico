@@ -43,12 +43,12 @@ class daRegistroHumedad {
                 $aux .= $objjson[$valor]. ",";
             }
         }        
-        
         unset($valor);
         $aux = substr($aux,0,-1);
-        $aux.= " where ".$columns[0]."=".$objjson[$columns[0]];     
-        $resultado = $objmysqli->query($aux);        
-        return $resultado;
+        $aux.= " where ".$columns[0]."=".$objjson[$columns[0]];
+        $resultado = $objmysqli->query($aux);
+        $rows_afected = $objmysqli->affected_rows;
+        return $rows_afected;
     }
     
     
