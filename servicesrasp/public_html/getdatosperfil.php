@@ -2,7 +2,7 @@
 require_once realpath(__DIR__ . '/../app/ReglasNegocio/brgeneric.php');
 $msg = file_get_contents("php://input");
 $values = json_decode($msg, true);
-
+//dfd
 $method = "read";
 $table = "usuario";
 $columns = array("idusuario","fec_reg");
