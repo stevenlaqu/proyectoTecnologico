@@ -1,7 +1,3 @@
--- noinspection SqlDialectInspectionForFile
-
--- noinspection SqlNoDataSourceInspectionForFile
-
 CREATE DATABASE  IF NOT EXISTS `plantitas`;
 USE `plantitas`;
 
