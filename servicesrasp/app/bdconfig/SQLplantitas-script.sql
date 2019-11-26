@@ -114,7 +114,7 @@ CREATE TABLE `sensorhumedad` (
   `id_terreno` int(11) DEFAULT NULL,
   `intervalo_sensado_min` int(11) DEFAULT NULL,
   `ult_fec_act` datetime DEFAULT NULL,
-  `ult_fec_sensado` datetime DEFAULT NULL,
+  `ult_plantaplantafec_sensado` datetime DEFAULT NULL,
   `flg_activo` char(1) DEFAULT NULL,
   PRIMARY KEY (`idsensorhumedad`),
   KEY `sh_ter_idx` (`id_terreno`),
