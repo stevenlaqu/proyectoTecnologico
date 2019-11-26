@@ -11,7 +11,7 @@ $columns = explode(",",$columns);
 
 
 $id = null;
- $obr = new brGeneric();
+$obr = new brGeneric();
 if($objjson !== null){
     if($method=="create"){
         $id = $obr->insertar($table,$columns,$objjson);
