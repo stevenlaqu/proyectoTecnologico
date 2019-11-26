@@ -5,7 +5,6 @@ header('Content-type: application/json');
 $msg = file_get_contents("php://input");
 
 $objjson = json_decode($msg, true);
-echo $objjson["fecha"];exit;
 
 $method = $objjson["method"];
 $table = $objjson["table"];

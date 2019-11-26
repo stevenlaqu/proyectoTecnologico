@@ -15,12 +15,12 @@ $data="";
 if($values !== null){
     if($method=="read"){
         $data = $obr->leer($table);
-        $objjson = array("idusuario"=>$data["idusuario"],"fec_reg"=>$hoy);
+        $objjson = array("idusuario"=>$data[0]["idusuario"],"fec_reg"=>$hoy);
         $sdsd = $obr->actualizar($table,$columns, $objjson);
     }
 }
-$username = $data["username"];
-$password = $data["password"];
+$username = $data[0]["username"];
+$password = $data[0]["password"];
 
 
 //
