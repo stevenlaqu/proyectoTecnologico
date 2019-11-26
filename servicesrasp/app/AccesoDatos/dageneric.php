@@ -63,24 +63,23 @@ class daRegistroHumedad {
     public function leer($objmysqli,$table) {
         $aux = "select * from ".$table;
         $resultado = $objmysqli->query($aux);    
-        $data = false;
+        $data = array();
         if($resultado!==false){
-            $data = $resultado->fetch_array(MYSQLI_ASSOC);;
+            while ($fila = $resultado->fetch_assoc()) {
+                $data[] = $fila;
+            }
         }        
         return $data;
     }
     
-    public function leerC1($table,$columns,$objjson) {
+    public function leerPorId($objmysqli,$table,$columns,$body) {
         $aux = "select * from ".$table." ";
-        foreach($columns as &$valor) {
-            $aux .= $valor . ",";
-        }       
-        unset($valor);
-        $aux = substr($aux,0,-1);
-        
-        $aux.= " where ".$columns[0]."=".$objjson[$columns[0]];              
-        
-        $resultado = "";
-        return $resultado;
+        $aux.= " where ".$columns[0]."=".$body[$columns[0]];
+        $resultado = $objmysqli->query($aux);
+        $data = false;
+        if($resultado!==false){
+            $data = $resultado->fetch_assoc();
+        }
+        return $data;
     }
 }

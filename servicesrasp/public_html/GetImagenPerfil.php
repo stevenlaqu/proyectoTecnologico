@@ -14,6 +14,3 @@ if($values !== false){
     echo "";
 }
 
-
-?>
-

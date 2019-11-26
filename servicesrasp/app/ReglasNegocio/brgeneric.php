@@ -47,12 +47,23 @@ class brGeneric {
     }
     
     public function leer($table) {
-        $data = false;
         $oda = new daRegistroHumedad();
         
         try {            
             $objMysqli = new mysqli(CONNECTION_HOST, CONNECTION_USER, CONNECTION_PASSWORD, CONNECTION_BD);
             $data = $oda->leer($objMysqli,$table);
+            $objMysqli->close();
+        } catch (Exception $error) {
+            return $error;
+        }
+        return $data;
+    }
+    public function leerPorId($table,$columns,$body) {
+        $oda = new daRegistroHumedad();
+
+        try {
+            $objMysqli = new mysqli(CONNECTION_HOST, CONNECTION_USER, CONNECTION_PASSWORD, CONNECTION_BD);
+            $data = $oda->leerPorId($objMysqli,$table,$columns,$body);
             $objMysqli->close();
         } catch (Exception $error) {
             return $error;
