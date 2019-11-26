@@ -65,7 +65,7 @@ class daRegistroHumedad {
         $resultado = $objmysqli->query($aux);    
         $data = false;
         if($resultado!==false){
-            $data = $resultado->fetch_all(MYSQLI_ASSOC);            
+            $data = $resultado->fetch_array(MYSQLI_ASSOC);;
         }        
         return $data;
     }
@@ -80,7 +80,7 @@ class daRegistroHumedad {
         
         $aux.= " where ".$columns[0]."=".$objjson[$columns[0]];              
         
-        $resultado = $objmysqli->query($aux);        
+        $resultado = "";
         return $resultado;
     }
 }

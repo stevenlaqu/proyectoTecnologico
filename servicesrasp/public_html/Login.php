@@ -6,6 +6,8 @@ $values = json_decode($msg, true);
 
 $method = "read";
 $table = "usuario";
+$columns = array("idusuario","fec_reg");
+$hoy = date("Y-m-d H:i:s");
 
 $id = null;
 $obr = new brGeneric();
@@ -13,11 +15,12 @@ $data="";
 if($values !== null){
     if($method=="read"){
         $data = $obr->leer($table);
-        echo json_encode($data);
+        $objjson = array("idusuario"=>$data["idusuario"],"fec_reg"=>$hoy);
+        $sdsd = $obr->actualizar($table,$columns, $objjson);
     }
 }
-$username = $data[0]["username"];
-$password = $data[0]["password"];
+$username = $data["username"];
+$password = $data["password"];
 
 
 

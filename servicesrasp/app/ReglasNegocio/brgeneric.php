@@ -1,6 +1,6 @@
 <?php
 
-require_once realpath(__DIR__ . '/../bdconfig/Config.php');
+require_once realpath(__DIR__ .'/../bdconfig/Config.php');
 require_once realpath(__DIR__ . '/../AccesoDatos/dageneric.php');
 
 class brGeneric {
@@ -59,6 +59,9 @@ class brGeneric {
         }
         return $data;
     }
+
+
+
 
 
 }
