@@ -20,7 +20,7 @@ CREATE TABLE `usuario` (
   PRIMARY KEY (`idusuario`)
 ) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=latin1;
 
-INSERT INTO `usuario` VALUES (1,'user','user@example.com','123456','robert','downey jr','98765478','1994-10-29 00:00:00','Calle los Jazmines','2019-10-29 00:00:00','T');
+INSERT INTO `usuario` VALUES (1,'robert','robert@example.com','123456','robert','downey jr','98765478','1994-10-29 00:00:00','Calle los Jazmines','2019-10-29 00:00:00','T');
 
 CREATE TABLE `area` (
   `idarea` int(11) NOT NULL AUTO_INCREMENT,
