@@ -27,13 +27,14 @@ CREATE TABLE `area` (
   `cant_terrenos` int(11) DEFAULT NULL,
   `dimension` varchar(50) DEFAULT NULL,
   `mapa_svg` varchar(200) DEFAULT NULL,
+  `img` varchar(255) DEFAULT NULL,
   `id_usuario` int(11) DEFAULT NULL,
   PRIMARY KEY (`idarea`),
   KEY `area_usua_idx` (`id_usuario`),
   CONSTRAINT `area_usua` FOREIGN KEY (`id_usuario`) REFERENCES `usuario` (`idusuario`) 
 ) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=latin1;
 
-INSERT INTO `area` VALUES (1,'Casa','F','1.7','1.7',1,'1 - 1',NULL,1);
+INSERT INTO `area` VALUES (1,'Casa','F','1.7','1.7',1,'1 - 1','','',1);
 
 CREATE TABLE `terreno` (
   `idterreno` int(11) NOT NULL AUTO_INCREMENT,
@@ -47,6 +48,7 @@ CREATE TABLE `terreno` (
   `tipo_suelo` varchar(200) DEFAULT NULL,
   `cant_sensores` int(11) DEFAULT NULL,
   `mapa_svg` varchar(200) DEFAULT NULL,
+  `img` varchar(255) DEFAULT NULL,
   `flg_drenaje` char(1) DEFAULT NULL,
   `id_area` int(11) DEFAULT NULL,
   `fec_ult_act` datetime DEFAULT NULL,
@@ -56,12 +58,18 @@ CREATE TABLE `terreno` (
   CONSTRAINT `terr_area` FOREIGN KEY (`id_area`) REFERENCES `area` (`idarea`) 
 ) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=latin1;
 
-INSERT INTO `terreno` VALUES (1,'maseta1','F','1.7','1.7',1,'0.2 - 0.3',35,'sustrato',1,NULL,'F',1,'2019-10-29 00:00:00','T');
+INSERT INTO `terreno` VALUES (1,'maseta1','F','1.7','1.7',1,'0.2 - 0.3',35,'sustrato',1,'','','F',1,'2019-10-29 00:00:00','T');
+INSERT INTO `terreno` VALUES (2,'maseta2','F','1.7','1.7',1,'0.2 - 0.3',35,'sustrato',1,'','','F',1,'2019-10-29 00:00:00','T');
+INSERT INTO `terreno` VALUES (3,'maseta3','F','1.7','1.7',1,'0.2 - 0.3',35,'sustrato',1,'','','F',1,'2019-10-29 00:00:00','T');
+INSERT INTO `terreno` VALUES (4,'maseta4','F','1.7','1.7',1,'0.2 - 0.3',35,'sustrato',1,'','','F',1,'2019-10-29 00:00:00','T');
+INSERT INTO `terreno` VALUES (5,'maseta5','F','1.7','1.7',1,'0.2 - 0.3',35,'sustrato',0,'','','F',1,'2019-10-29 00:00:00','T');
+INSERT INTO `terreno` VALUES (6,'maseta6','F','1.7','1.7',1,'0.2 - 0.3',35,'sustrato',0,'','','F',1,'2019-10-29 00:00:00','T');
 
 CREATE TABLE `fuenteagua` (
   `idfuenteagua` int(11) NOT NULL AUTO_INCREMENT,
   `nombre` varchar(200) DEFAULT NULL,
   `capacidadlitros` int(11) DEFAULT NULL,
+  `img` varchar(255) DEFAULT NULL,
   `flg_constante` char(1) DEFAULT NULL,
   `ult_fec_act` datetime DEFAULT NULL,
   `ult_fec_llenado` datetime DEFAULT NULL,
@@ -69,7 +77,7 @@ CREATE TABLE `fuenteagua` (
   PRIMARY KEY (`idfuenteagua`)
 ) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=latin1;
 
-INSERT INTO `fuenteagua` VALUES (1,'tanque1',20,'T','2019-10-29 00:00:00','2019-10-29 00:00:00','T');
+INSERT INTO `fuenteagua` VALUES (1,'tanque1',20,'','T','2019-10-29 00:00:00','2019-10-29 00:00:00','T');
 
 CREATE TABLE `planta` (
   `idplanta` int(11) NOT NULL AUTO_INCREMENT,
@@ -78,6 +86,7 @@ CREATE TABLE `planta` (
   `tipo` varchar(200) DEFAULT NULL,
   `tamano` int(11) DEFAULT NULL,
   `origen` varchar(200) DEFAULT NULL,
+  `img` varchar(255) DEFAULT NULL,
   `fec_ini` datetime DEFAULT NULL,
   `fec_add` datetime DEFAULT NULL,
   `fec_fin` datetime DEFAULT NULL,
@@ -88,12 +97,12 @@ CREATE TABLE `planta` (
   CONSTRAINT `plan_terr` FOREIGN KEY (`id_terreno`) REFERENCES `terreno` (`idterreno`) 
 ) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=latin1;
 
-INSERT INTO `planta` VALUES (1,'helecho','costero - tropical','ornamental',45,'lunahuana','2019-05-22 00:00:00','2019-10-29 00:00:00',NULL,1,'T');
-INSERT INTO `planta` VALUES (2,'helecho','costero - tropical','ornamental',45,'lunahuana','2019-05-22 00:00:00','2019-10-29 00:00:00',NULL,1,'T');
-INSERT INTO `planta` VALUES (3,'helecho','costero - tropical','ornamental',45,'lunahuana','2019-05-22 00:00:00','2019-10-29 00:00:00',NULL,1,'T');
-INSERT INTO `planta` VALUES (4,'helecho','costero - tropical','ornamental',45,'lunahuana','2019-05-22 00:00:00','2019-10-29 00:00:00',NULL,1,'T');
-INSERT INTO `planta` VALUES (5,'helecho','costero - tropical','ornamental',45,'lunahuana','2019-05-22 00:00:00','2019-10-29 00:00:00',NULL,1,'T');
-INSERT INTO `planta` VALUES (6,'helecho','costero - tropical','ornamental',45,'lunahuana','2019-05-22 00:00:00','2019-10-29 00:00:00',NULL,1,'T');
+INSERT INTO `planta` VALUES (1,'helecho','costero - tropical','ornamental',45,'lunahuana','','2019-05-22 00:00:00','2019-10-29 00:00:00',NULL,1,'T');
+INSERT INTO `planta` VALUES (2,'cactus','costero - seco','ornamental',45,'ica','','2019-05-22 00:00:00','2019-10-29 00:00:00',NULL,2,'T');
+INSERT INTO `planta` VALUES (3,'rosas','costero - tropical','ornamental',45,'lima','','2019-05-22 00:00:00','2019-10-29 00:00:00',NULL,3,'T');
+INSERT INTO `planta` VALUES (4,'hortensias','costero - tropical','ornamental',45,'lima','','2019-05-22 00:00:00','2019-10-29 00:00:00',NULL,4,'T');
+INSERT INTO `planta` VALUES (5,'geráneo','costero - tropical','ornamental',45,'huacho','','2019-05-22 00:00:00','2019-10-29 00:00:00',NULL,2,'T');
+INSERT INTO `planta` VALUES (6,'zanahoria','costero - tropical','ornamental',45,'lima','','2019-05-22 00:00:00','2019-10-29 00:00:00',NULL,3,'T');
 
 CREATE TABLE `sensorhumedad` (
   `idsensorhumedad` int(11) NOT NULL AUTO_INCREMENT,
@@ -113,6 +122,10 @@ CREATE TABLE `sensorhumedad` (
 ) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=latin1;
 
 INSERT INTO `sensorhumedad` VALUES (1,'sensor humedad 1',120,225,10,'SHUM-001',1,20,'2019-10-29 00:00:00','2019-10-29 13:00:00','T');
+INSERT INTO `sensorhumedad` VALUES (2,'sensor humedad 2',120,225,10,'SHUM-002',2,20,'2019-10-29 00:00:00','2019-10-29 13:00:00','T');
+INSERT INTO `sensorhumedad` VALUES (3,'sensor humedad 3',120,225,10,'SHUM-003',3,20,'2019-10-29 00:00:00','2019-10-29 13:00:00','T');
+INSERT INTO `sensorhumedad` VALUES (4,'sensor humedad 4',120,225,10,'SHUM-004',4,20,'2019-10-29 00:00:00','2019-10-29 13:00:00','T');
+
 
 CREATE TABLE `sensortemperatura` (
   `idsensortemperatura` int(11) NOT NULL AUTO_INCREMENT,
