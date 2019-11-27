@@ -3,13 +3,18 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/D:/isil/proyecto/services/proyectoTecnologico/servicesrasp/public_html/reghumedad.php</file>
+            <file>file:/D:/isil/proyecto/services/proyectoTecnologico/servicesrasp/public_html/index.php</file>
+            <file>file:/D:/isil/proyecto/services/proyectoTecnologico/servicesrasp/public_html/getdatosperfil.php</file>
+            <file>file:/D:/isil/proyecto/services/proyectoTecnologico/servicesrasp/public_html/login.php</file>
             <file>file:/D:/isil/proyecto/services/proyectoTecnologico/servicesrasp/app/ReglasNegocio/brgeneric.php</file>
-            <file>file:/D:/isil/proyecto/services/proyectoTecnologico/servicesrasp/public_html/Login.php</file>
+            <file>file:/D:/isil/proyecto/services/proyectoTecnologico/servicesrasp/app/bdconfig/Config.php</file>
+            <file>file:/D:/isil/proyecto/services/proyectoTecnologico/servicesrasp/public_html/sensorhumedad.php</file>
+            <file>file:/D:/isil/proyecto/services/proyectoTecnologico/servicesrasp/app/bdconfig/SQLplantitas-script.sql</file>
             <file>file:/D:/isil/proyecto/services/proyectoTecnologico/servicesrasp/public_html/generadorCRUD.php</file>
             <file>file:/D:/isil/proyecto/services/proyectoTecnologico/servicesrasp/public_html/GetImagenPortada.php</file>
-            <file>file:/D:/isil/proyecto/services/proyectoTecnologico/servicesrasp/public_html/GetDatosPerfil.php</file>
             <file>file:/D:/isil/proyecto/services/proyectoTecnologico/servicesrasp/app/AccesoDatos/dageneric.php</file>
+            <file>file:/D:/isil/proyecto/services/proyectoTecnologico/servicesrasp/public_html/GetImagenPerfil.php</file>
+            <file>file:/D:/isil/proyecto/services/proyectoTecnologico/servicesrasp/public_html/examples.json</file>
         </group>
     </open-files>
 </project-private>

@@ -3,7 +3,17 @@ require_once realpath(__DIR__ . '/../app/ReglasNegocio/brgeneric.php');
 
 $obr = new brGeneric();
 $data = $obr->leer("tr_sensorhumedad");
-$dataT = $obr->leer("tr_sensortemperatura");?>
+$dataT = $obr->leer("tr_sensortemperatura");
+
+$file = fopen("archivo.txt", "w");
+
+fwrite($file, " hum1 " .$data[0]["lectura"]." <> ".$data[0]["fecha"]. PHP_EOL);
+fwrite($file, " hum2 " .$data[1]["lectura"]." <> ".$data[1]["fecha"]. PHP_EOL);
+fwrite($file, " hum3 " .$data[2]["lectura"]." <> ".$data[2]["fecha"]. PHP_EOL);
+fwrite($file, " hum4 " .$data[3]["lectura"]." <> ".$data[3]["fecha"]. PHP_EOL);
+fwrite($file, " temp1 " .$dataT[0]["lectura"]." <> ".$dataT[0]["fecha"]. PHP_EOL);
+fclose($file);
+?>
 <!DOCTYPE html>
 <html>
 <head>
