@@ -73,6 +73,18 @@ class brGeneric {
         }
         return $data;
     }
+    public function leerUltimos4($table,$columns,$body) {
+        $oda = new daRegistroHumedad();
+
+        try {
+            $objMysqli = new mysqli(CONNECTION_HOST, CONNECTION_USER, CONNECTION_PASSWORD, CONNECTION_BD);
+            $data = $oda->leerUltimos4($objMysqli,$table,$columns,$body);
+            $objMysqli->close();
+        } catch (Exception $error) {
+            return $error;
+        }
+        return $data;
+    }
 
 
 

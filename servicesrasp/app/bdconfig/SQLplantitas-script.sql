@@ -236,6 +236,7 @@ CREATE TABLE `tr_sensortemperatura` (
   KEY `tr_sen_temp_idx` (`id_sensortemperatura`),
   CONSTRAINT `tr_sen_temp` FOREIGN KEY (`id_sensortemperatura`) REFERENCES `sensortemperatura` (`idsensortemperatura`) 
 ) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=latin1;
+INSERT INTO tr_sensortemperatura(idtr_sensortemperatura,id_sensortemperatura,lectura,fecha,ult_intervalo,flg_motivoriego)VALUES(1,1,10,'2019-11-26 19:19:19','2019-11-26 19:19:19','F');
 
 CREATE TABLE `tr_riegoprogramado` (
   `idtr_riegoprogramado` int(11) NOT NULL AUTO_INCREMENT,
@@ -258,5 +259,20 @@ CREATE TABLE `tr_riegoprogramado` (
   CONSTRAINT `trrp_trst_fin` FOREIGN KEY (`id_fin_tr_st`) REFERENCES `tr_sensortemperatura` (`idtr_sensortemperatura`) ,
   CONSTRAINT `trrp_trst_ini` FOREIGN KEY (`id_ini_tr_st`) REFERENCES `tr_sensortemperatura` (`idtr_sensortemperatura`)
 ) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=latin1;
+
+
+DELIMITER $$
+ 
+CREATE TRIGGER after_tr_hum_update
+AFTER UPDATE
+ON tr_sensorhumedad FOR EACH ROW
+BEGIN
+    IF OLD.lectura <> new.lectura THEN
+        update tr_sensorhumedad 
+        set fecha=current_timestamp;
+    END IF;
+END$$
+ 
+DELIMITER ;
 
 

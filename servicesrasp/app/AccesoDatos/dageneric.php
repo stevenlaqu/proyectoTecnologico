@@ -46,6 +46,7 @@ class daRegistroHumedad {
         unset($valor);
         $aux = substr($aux,0,-1);
         $aux.= " where ".$columns[0]."=".$objjson[$columns[0]];
+        echo $aux;
         $resultado = $objmysqli->query($aux);
         $rows_afected = $objmysqli->affected_rows;
         return $rows_afected;
@@ -73,6 +74,16 @@ class daRegistroHumedad {
     }
     
     public function leerPorId($objmysqli,$table,$columns,$body) {
+        $aux = "select * from ".$table." ";
+        $aux.= " where ".$columns[0]."=".$body[$columns[0]];
+        $resultado = $objmysqli->query($aux);
+        $data = false;
+        if($resultado!==false){
+            $data = $resultado->fetch_assoc();
+        }
+        return $data;
+    }
+    public function leerUltimos4($objmysqli,$table,$columns,$body) {
         $aux = "select * from ".$table." ";
         $aux.= " where ".$columns[0]."=".$body[$columns[0]];
         $resultado = $objmysqli->query($aux);

@@ -22,3 +22,4 @@
     },
     
 ]
+[msg.temp, msg.foco, msg.pot, msg.hum1, msg.hum2, msg.hum3, msg.hum4];
