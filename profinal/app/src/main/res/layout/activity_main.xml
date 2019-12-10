@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="32dp"
+    android:orientation="vertical"
+    tools:context="com.example.smartgarden.HomeSmartGardenActivity">
+
+    <ImageView
+        android:layout_width="match_parent"
+
+        android:layout_height="150dp"
+        android:layout_marginTop="30dp"
+        android:src="@drawable/logo320" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/ubunturegular"
+        android:text="@string/app_description"
+        android:textAlignment="center"
+        android:textColor="@color/colorTextoDescrip"
+        android:textSize="18dp" />
+
+    <EditText
+        android:id="@+id/txtUserLogin"
+        android:layout_width="240dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="20dp"
+        android:hint="Usuario"
+        android:text="robert"
+        android:inputType="textEmailAddress"
+        android:textColor="@color/colorTextoAct"
+        android:textSize="18dp" />
+
+    <EditText
+        android:id="@+id/txtPassLogin"
+        android:layout_width="240dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="123456"
+        android:hint="Contraseña"
+        android:inputType="textPassword"
+        android:textColor="@color/colorTextoAct"
+        android:textSize="18dp"
+        />
+
+
+
+    <Button
+        android:id="@+id/btnIni"
+        android:layout_width="180dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="40dp"
+        android:background="@drawable/boton_redondeado"
+        android:fontFamily="@font/ubunturegular"
+        android:paddingHorizontal="20dp"
+        android:text="Iniciar Sesión"
+        android:textAllCaps="false"
+        android:textColor="@color/colorTextoBoton_1"
+        android:textSize="18dp" />
+
+    <Button
+        android:id="@+id/btnReg"
+        android:layout_width="180dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/boton_redondeado_2"
+        android:fontFamily="@font/ubunturegular"
+        android:paddingHorizontal="20dp"
+        android:text="Registrarme"
+        android:textAllCaps="false"
+        android:textColor="@color/colorTextoBoton_1"
+        android:textSize="18dp" />
+
+    <TextView
+        android:id="@+id/lblOlvide"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="20dp"
+        android:text="@string/olvidoContrasena"
+        android:textColor="@color/colorTextoAct"
+        android:textSize="14dp" />
+</LinearLayout>

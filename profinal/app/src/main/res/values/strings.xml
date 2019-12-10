@@ -1,0 +1,17 @@
+<resources>
+    <string name="server_ur">http://10.0.2.2:8082/</string>
+    <string name="server_uri">http://192.168.1.61:8082/</string>
+
+    <string name="app_name">Smart Garden</string>
+    <string name="app_description">Tu jardín en tus manos.</string>
+
+    <string name="olvidoContrasena"><u>Olvidé mi contraseña</u></string>
+    <string name="title_activity_home">HomeActivity</string>
+
+
+    <string name="tab_text_1">Areas</string>
+    <string name="tab_text_2">Terrenos</string>
+    <string name="tab_text_3">Plantas</string>
+    <string name="tab_text_4">Sensores</string>
+    <string name="tab_text_5">Bombas</string>
+</resources>

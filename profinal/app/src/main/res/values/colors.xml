@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorTemaNotBC">#749f42</color>
+
+    <color name="colorTemaClaro">#a5d279</color>
+    <color name="colorTemaOscuro">#8e917d</color>
+
+    <color name="colorPrimary">#76c32e</color>
+    <color name="colorPrimaryDark">#8e917d</color>
+
+    <color name="colorTextoTitulo">#4d4d4d</color>
+    <color name="colorTextoDescrip">#bababe</color>
+    <color name="colorTextoDesact">#bababe</color>
+    <color name="colorTextoAct">#4d4d4d</color>
+    <color name="colorTextoFuerte">#ffffff</color>
+    <color name="colorFromasSimple">#dce0e4</color>
+    <color name="colorFormaDesact">#8e917d</color>
+    <color name="colorFormaAct">#88bf55</color>
+    <color name="colorFormaAct2">#f18676</color>
+    <color name="colorTextoBoton_1">#f9fafb</color>
+    <color name="colorVerdeSutil">#a5d279</color>
+    <color name="colorSombra">#2E2E2E</color>
+
+
+
+</resources>
